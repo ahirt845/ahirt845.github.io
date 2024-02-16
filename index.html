@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockchain Consulting LLC</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Preload navigation content
+        window.addEventListener('DOMContentLoaded', (event) => {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Cache navigation content in a hidden div
+                    const navigationDiv = document.createElement('div');
+                    navigationDiv.style.display = 'none';
+                    navigationDiv.innerHTML = data;
+                    document.body.appendChild(navigationDiv);
+                })
+                .catch(error => console.error('Error preloading navigation:', error));
+        });
+    </script>
 </head>
 <body>
 
