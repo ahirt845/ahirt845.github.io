@@ -8,7 +8,15 @@
 </head>
 <body>
 
-    <div id="navigation-placeholder"></div> <!-- Placeholder for navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
 
     <div class="container">
         <div class="content">
@@ -19,21 +27,6 @@
     </div>
 
     <script>
-        // Function to load navigation content
-        function loadNavigation() {
-            // Fetch navigation.html content
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insert navigation content into placeholder
-                    document.getElementById('navigation-placeholder').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading navigation:', error));
-        }
-
-        // Call loadNavigation function to load navigation content
-        loadNavigation();
-
         // Button message
         function showAlert() {
             alert("You clicked the Get Started button. It doesn't currently do anything, but it will later.");
