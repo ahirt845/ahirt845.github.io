@@ -82,35 +82,47 @@ nav ul li a:hover {
     background-color: rgb(0, 0, 0); /* Change background color on hover */
 }
 
-/* Adjusted styles for Services list */
-.services-columns {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Add gap between columns */
-}
-
-.services-column {
-    flex: 1;
-}
-
 .service-list {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between cards as needed */
 }
 
 .service-card {
-    background-color: #17386844;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #17386844; /* Set the background color of the cards */
     border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow to the cards for depth */
 }
 
-.service-icon {
+.service-card i {
+    margin: 20px auto; /* Center the icon */
     font-size: 24px;
-    margin-bottom: 10px;
+}
+
+.service-card div {
+    padding: 20px;
 }
 
 .service-title {
-    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap to the next line */
+    justify-content: center; /* Center the cards horizontally */
+}
+
+.service-card {
+    flex: 1; /* Make all cards in the column have the same width */
+    max-width: 300px; /* Set the maximum width of each card */
+}
+
+
+
+/* .service-card {
+    background-color: #17386844; */
