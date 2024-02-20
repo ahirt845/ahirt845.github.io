@@ -90,7 +90,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(4, 1fr); /* Divide the container into four equal columns */
     gap: 20px; /* Add gap between cards */
     justify-content: center; /* Center-align the columns */
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .service-card {
