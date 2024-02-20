@@ -96,6 +96,7 @@ nav ul li a:hover {
     background-color: #17386844;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px; /*Adjust the width of the cards */
 }
 
 .service-card i {
