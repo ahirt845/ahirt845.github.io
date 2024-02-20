@@ -83,6 +83,16 @@ nav ul li a:hover {
 }
 
 /* New styles for Services list */
+
+.services-columns {
+    display: flex;
+}
+
+.services-column {
+    flex: 1; /* Each column takes up equal space */
+    padding: 0 20px; /* Add horizontal spacing between columns */
+}
+
 .services-container {
     width: 80%;
     margin: auto;
@@ -102,8 +112,6 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically */
     margin-bottom: 20px; /* Add spacing between service cards */
 }
 
