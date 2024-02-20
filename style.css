@@ -82,48 +82,35 @@ nav ul li a:hover {
     background-color: rgb(0, 0, 0); /* Change background color on hover */
 }
 
-/* New styles for Services list */
-
+/* Adjusted styles for Services list */
 .services-columns {
     display: flex;
-    justify-content: center; /* Center-align columns */
-    flex-wrap: wrap; /* Allow columns to wrap to the next line */
+    justify-content: center;
+    gap: 20px; /* Add gap between columns */
 }
 
 .services-column {
-    flex: 1; /* Each column takes up equal space */
-    padding: 0 20px; /* Add horizontal spacing between columns */
-    list-style-type: none; /* Remove default bullet points */
-    max-width: 300px; /* Adjust column width as needed */
+    flex: 1;
 }
 
-.services-container {
-    width: 80%;
-    margin: auto;
-}
-
-.services-content {
-    text-align: left;
-}
-
-.services-list {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding */
+.service-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
 }
 
 .service-card {
-    background-color: #1a48673c;
+    background-color: #f9f9f9;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-.service-title {
-    margin: 0;
-}
-
 .service-icon {
     font-size: 24px;
-    margin-bottom: 10px; /* Add spacing between icon and title */
+    margin-bottom: 10px;
+}
+
+.service-title {
+    margin: 0;
 }
