@@ -86,31 +86,20 @@ nav ul li a:hover {
 /* Services Styles */
 
 .services-columns {
-    display: flex;
-    flex-wrap: wrap; /* Allow the columns to wrap to the next line */
-    justify-content: space-around; /* Adjust as needed to center-align the columns */
-}
-
-.services-column {
-    flex: 1; /* Make each column flexible */
-    max-width: 300px; /* Set the maximum width of each column */
-    margin: 0 10px; /* Add spacing between columns */
-}
-
-.service-list {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+    gap: 20px; /* Add gap between cards */
+    justify-content: center; /* Center-align the columns */
 }
 
 .service-card {
-    background-color: #17386844; /* Set the background color of the cards */
+    background-color: #17386844;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow to the cards for depth */
-    margin-bottom: 20px; /* Add space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-card i {
-    margin: 20px auto; /* Center the icon */
+    margin: 20px auto;
     font-size: 24px;
 }
 
@@ -122,6 +111,7 @@ nav ul li a:hover {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 
 
 
