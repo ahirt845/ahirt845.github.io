@@ -87,7 +87,7 @@ nav ul li a:hover {
 
 .services-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+    grid-template-columns: repeat(4, 1fr); /* Divide the container into four equal columns */
     gap: 20px; /* Add gap between cards */
     justify-content: center; /* Center-align the columns */
 }
