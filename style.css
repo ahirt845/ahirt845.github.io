@@ -94,6 +94,7 @@ nav ul li a:hover {
     flex: 1; /* Each column takes up equal space */
     padding: 0 20px; /* Add horizontal spacing between columns */
     list-style-type: none; /* Remove default bullet points */
+    max-width: 300px; /* Adjust column width as needed */
 }
 
 .services-container {
@@ -115,10 +116,7 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add spacing between service cards */
-    height: auto; /* Set height to auto to accommodate content */
-    display: flex; /* Enable flexbox layout */
-    flex-direction: column; /* Stack child elements vertically */
+    margin-bottom: 20px;
 }
 
 .service-title {
@@ -127,5 +125,5 @@ nav ul li a:hover {
 
 .service-icon {
     font-size: 24px;
-    margin-right: 10px; /* Add spacing between icon and title */
+    margin-bottom: 10px; /* Add spacing between icon and title */
 }
