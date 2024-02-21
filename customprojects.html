@@ -6,55 +6,61 @@
     <title>Custom Projects</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .container {
+        .customproject-container {
             max-width: 1200px; /* Limit container width */
             margin: 0 auto; /* Center container horizontally */
             padding: 0 20px; /* Add padding to the sides */
         }
 
-        .section {
+        .customproject-content {
+            text-align: center; /* Center-align content */
+        }
+
+        .customproject-section {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            text-align: left; /* Left-align section content */
         }
 
-        .section-content,
-        .section-image {
-            width: 48%; /* Adjusted width */
+        .customproject-section-content,
+        .customproject-section-image {
+            width: 50%; /* Adjusted width */
         }
 
-        img {
+        .customproject-image {
             max-width: 100%; /* Make the images responsive */
             height: auto;
             display: block;
-            margin: 0 auto;
+            margin: 0 auto; /* Center-align images */
         }
 
-        .bulleted-list {
+        .customproject-bulleted-list {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+            text-align: left; /* Left-align bulleted list items */
         }
 
-        .bulleted-list-column {
+        .customproject-bulleted-list-column {
             width: 30%; /* Adjusted width */
         }
 
         @media (max-width: 768px) {
-            .section {
+            .customproject-section {
                 flex-direction: column;
             }
 
-            .section-content,
-            .section-image {
+            .customproject-section-content,
+            .customproject-section-image {
                 width: 100%;
             }
 
-            .bulleted-list {
+            .customproject-bulleted-list {
                 flex-direction: column;
             }
 
-            .bulleted-list-column {
+            .customproject-bulleted-list-column {
                 width: 100%;
             }
         }
@@ -72,13 +78,13 @@
         </ul>
     </nav>
     
-    <div class="container">
-        <div class="content">
+    <div class="customproject-container">
+        <div class="customproject-content">
             <h1>Custom Projects</h1>
             
             <!-- First Section -->
-            <div class="section">
-                <div class="section-content">
+            <div class="customproject-section">
+                <div class="customproject-section-content">
                     <h2>Section 1</h2>
                     <p>Text description of the picture goes here...</p>
                     <ul>
@@ -87,28 +93,28 @@
                         <li>Point C</li>
                     </ul>
                 </div>
-                <div class="section-image">
-                    <img src="https://www.muchbetteradventures.com/magazine/content/images/2019/06/13091225/iStock-157644719.jpg" alt="Description of the image">
+                <div class="customproject-section-image">
+                    <img class="customproject-image" src="https://www.muchbetteradventures.com/magazine/content/images/2019/06/13091225/iStock-157644719.jpg" alt="Description of the image">
                 </div>
             </div>
             
             <!-- Second Section - Bulleted List -->
-            <div class="bulleted-list">
-                <div class="bulleted-list-column">
+            <div class="customproject-bulleted-list">
+                <div class="customproject-bulleted-list-column">
                     <ul>
                         <li>Point 1</li>
                         <li>Point 2</li>
                         <li>Point 3</li>
                     </ul>
                 </div>
-                <div class="bulleted-list-column">
+                <div class="customproject-bulleted-list-column">
                     <ul>
                         <li>Point 4</li>
                         <li>Point 5</li>
                         <li>Point 6</li>
                     </ul>
                 </div>
-                <div class="bulleted-list-column">
+                <div class="customproject-bulleted-list-column">
                     <ul>
                         <li>Point 7</li>
                         <li>Point 8</li>
@@ -118,8 +124,8 @@
             </div>
             
             <!-- Third Section -->
-            <div class="section">
-                <div class="section-content">
+            <div class="customproject-section">
+                <div class="customproject-section-content">
                     <h2>Section 2</h2>
                     <p>Text description of the picture goes here...</p>
                     <ul>
@@ -128,8 +134,8 @@
                         <li>Point Z</li>
                     </ul>
                 </div>
-                <div class="section-image">
-                    <img src="https://www.wildnatureimages.com/images/640/070620-014-The-Tetons.jpg" alt="Description of the image">
+                <div class="customproject-section-image">
+                    <img class="customproject-image" src="https://www.wildnatureimages.com/images/640/070620-014-The-Tetons.jpg" alt="Description of the image">
                 </div>
             </div>
             
