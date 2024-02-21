@@ -1,3 +1,7 @@
+//Note: This script is not used on this website. I created it for the contact form, 
+// but GitHub Pages doesn't allower server side processing so this is not used. I am using 
+// Formspre instead. If I move the website away from GitHub Pages we can use this script.
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
