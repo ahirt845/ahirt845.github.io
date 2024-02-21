@@ -1,3 +1,5 @@
+/* Original Contact page, but replaced it with the other contact.html */
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,43 +12,34 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
         }
 
         .contact-container {
             height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-image: url('background.jpg'); /* Replace 'background.jpg' with your image */
-            background-size: cover;
-            background-position: center;
         }
 
         .contact-content {
             width: 80%;
             max-width: 800px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .contact-title {
             font-size: 2em;
             margin-bottom: 20px;
-            color: #333;
         }
 
         .contact-message {
             font-size: 1.1em;
             margin-bottom: 20px;
-            color: #666;
         }
 
         .contact-form {
+            text-align: left;
             margin-bottom: 20px;
         }
 
@@ -62,7 +55,7 @@
         .contact-submit {
             background-color: #007bff;
             color: #fff;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -93,13 +86,16 @@
             <p class="contact-message">If you prefer, you can also email us directly at <a href="mailto:support@blockchain-consulting.com">support@blockchain-consulting.com</a>.</p>
 
             <form class="contact-form" action="https://formspree.io/f/mdoqgqgd" method="post">
-                <input type="text" id="contact-name" class="contact-input" name="name" placeholder="Your Name" required><br>
+                <label for="contact-name">Name:</label><br>
+                <input type="text" id="contact-name" class="contact-input" name="name" required><br>
 
-                <input type="email" id="contact-email" class="contact-input" name="email" placeholder="Your Email Address" required><br> 
+                <label for="contact-email">Email Address:</label><br>
+                <input type="email" id="contact-email" class="contact-input" name="email" required><br> 
                 
-                <textarea id="contact-message" class="contact-input" name="message" rows="4" placeholder="Your Message" required></textarea><br>               
+                <label for="contact-message">Message:</label><br>
+                <textarea id="contact-message" class="contact-input" name="message" rows="4" required></textarea><br>               
 
-                <input type="submit" value="Send Message" class="contact-submit">
+                <input type="submit" value="Submit" class="contact-submit">
             </form>
         </div>
     </div>
