@@ -115,6 +115,10 @@ nav ul li a:hover {
 }
 
 
+/* Other Styles */
+.contact-input, textarea {
+    font-family: Arial, sans-serif;
+}
 
 
 
