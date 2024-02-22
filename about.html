@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blockchain Consulting LLC</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Consulting LLC - About</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add custom CSS for layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%; /* Ensure container stretches to full height */
+        }
+
+        .about-content {
+            flex: 1;
+            margin-right: 20px; /* Add spacing between the divisions */
+            text-align: center; /* Center align text */
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
 <body>
     <nav>
         <ul>
@@ -18,10 +44,24 @@
         </ul>
     </nav>
     
-    <div class="container">
-        <div class="content">
-            <h1>About Me</h1>
-            <p>More content coming soon.</p>
+    <div class="about-container">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <h2>Our Services</h2>
+            <p>We offer the following services:</p>
+            <ul>
+                <li>Custom Jira Projects</li>
+                <li>Integration with eazyBI</li>
+                <li>Automate Time Consuming Tasks</li>
+                <li>Custom Workflows for your Jira Project</li>
+                <li>Use Team Calendars to track Agile meetings</li>
+                <li>Create a Dashboard of Project Metrics</li>
+                <li>No Problem Can't Be Solved</li>
+                <li>Agile Focused Solutions</li>
+            </ul>
+        </div>
+        <div class="about-image">
+            <img src="https://i.imgur.com/txciDMp.jpeg" alt="Image Description">
         </div>
     </div>
 </body>
