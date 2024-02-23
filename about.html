@@ -27,6 +27,8 @@
             justify-content: space-between;
             align-items: center;
             width: 100%; /* Ensure the container takes up full width */
+            max-width: 1200px; /* Set a max-width for the container */
+            margin: 0 auto; /* Center the container horizontally */
         }
 
         .about-content,
@@ -43,24 +45,25 @@
         .about-image img {
             max-width: 100%;
             height: auto;
-            width: 500px; /* Adjust the width of the image */
+            width: 100%; /* Set the image width to 100% of its container */
         }
 
         /* Add margin-bottom to the h1 element */
         h1 {
-            margin-bottom: 50px; /* Reduced margin */
+            margin-bottom: 2rem; /* Reduced margin */
             text-align: center; /* Center align the heading */
         }
 
         h2 {
-            margin-top: 50px;
+            margin-top: 2rem; /* Use rem units for consistent spacing */
         }
 
         /* Left-align bullet points */
         .about-content ul {
             text-align: left;
-            padding-left: 75px; /* Add padding to the left of the list items */
+            padding-left: 1.5rem; /* Use rem units for consistent padding */
         }
+        
     </style>
 </head>
 <body>
