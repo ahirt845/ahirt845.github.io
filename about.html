@@ -12,43 +12,45 @@
             margin: 0;
             padding: 0;
         }
-    
+
         .about-padding {
             display: flex; /* Use flexbox */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
             height: 100%; /* Ensure container stretches to full height */
             padding: 0 20px; /* Add padding to the left and right edges of the container */
+            flex-direction: column; /* Stack items vertically */
         }
-    
+
         .about-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%; /* Ensure the container takes up full width */
         }
-    
+
         .about-content,
         .about-image {
             flex: 1;
             width: 40%; /* Each division takes up 40% of the viewport width */
         }
-    
+
         .about-content {
             margin-right: 20px; /* Add spacing between the divisions */
             text-align: center; /* Center align text */
         }
-    
+
         .about-image img {
             max-width: 100%;
             height: auto;
         }
-    
+
         /* Add margin-bottom to the h1 element */
         h1 {
-            margin-bottom: 100px;
+            margin-bottom: 50px; /* Reduced margin */
+            text-align: center; /* Center align the heading */
         }
-    
+
         h2 {
             margin-top: 50px;
         }
@@ -67,9 +69,9 @@
     </nav>
 
     <div class="about-padding"> <!-- This div provides padding -->
+        <h1>About Us</h1> <!-- Center align the About Us section -->
         <div class="about-container">
             <div class="about-content">
-                <h1>About Us</h1>
                 <h2>Our Services</h2>
                 <p>We offer the following services:</p>
                 <ul>
