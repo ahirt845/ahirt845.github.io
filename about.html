@@ -12,39 +12,46 @@
             margin: 0;
             padding: 0;
         }
-
+    
+        .about-padding {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100%; /* Ensure container stretches to full height */
+            padding: 0 20px; /* Add padding to the left and right edges of the container */
+        }
+    
         .about-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 100%; /* Ensure container stretches to full height */
+            width: 100%; /* Ensure the container takes up full width */
         }
-
+    
         .about-content,
         .about-image {
             flex: 1;
             width: 40%; /* Each division takes up 40% of the viewport width */
         }
-
+    
         .about-content {
             margin-right: 20px; /* Add spacing between the divisions */
             text-align: center; /* Center align text */
         }
-
+    
         .about-image img {
             max-width: 100%;
             height: auto;
         }
-
+    
         /* Add margin-bottom to the h1 element */
         h1 {
             margin-bottom: 100px;
         }
-
+    
         h2 {
             margin-top: 50px;
         }
-
     </style>
 </head>
 <body>
@@ -58,25 +65,27 @@
             <!-- Add more links as needed -->
         </ul>
     </nav>
-    
-    <div class="about-container">
-        <div class="about-content">
-            <h1>About Us</h1>
-            <h2>Our Services</h2>
-            <p>We offer the following services:</p>
-            <ul>
-                <li>Custom Jira Projects</li>
-                <li>Integration with eazyBI</li>
-                <li>Automate Time Consuming Tasks</li>
-                <li>Custom Workflows for your Jira Project</li>
-                <li>Use Team Calendars to track Agile meetings</li>
-                <li>Create a Dashboard of Project Metrics</li>
-                <li>No Problem Can't Be Solved</li>
-                <li>Agile Focused Solutions</li>
-            </ul>
-        </div>
-        <div class="about-image">
-            <img src="Images/ai business girl.jpg" alt="Image Description">
+
+    <div class="about-padding"> <!-- This div provides padding -->
+        <div class="about-container">
+            <div class="about-content">
+                <h1>About Us</h1>
+                <h2>Our Services</h2>
+                <p>We offer the following services:</p>
+                <ul>
+                    <li>Custom Jira Projects</li>
+                    <li>Integration with eazyBI</li>
+                    <li>Automate Time Consuming Tasks</li>
+                    <li>Custom Workflows for your Jira Project</li>
+                    <li>Use Team Calendars to track Agile meetings</li>
+                    <li>Create a Dashboard of Project Metrics</li>
+                    <li>No Problem Can't Be Solved</li>
+                    <li>Agile Focused Solutions</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="Images/ai business girl.jpg" alt="Image Description">
+            </div>
         </div>
     </div>
 </body>
