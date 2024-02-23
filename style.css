@@ -120,6 +120,10 @@ nav ul li a:hover {
     font-family: Arial, sans-serif;
 }
 
+.left-align {
+    text-align: left;
+}
+
 
 
 /* .service-card {
