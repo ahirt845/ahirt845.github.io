@@ -1,0 +1,942 @@
+First, the CSS file titled 'style.css' :
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    /* Set the background image */
+    background-image: url('./Images/plenio_background.jpg');
+    /* Specify background properties */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Do not repeat the background */
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: rgb(35, 47, 80);
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(35, 47, 80);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
+
+/* Navigation styles */
+nav {
+    background-color: rgb(35, 47, 80); /* Set background color */
+    padding: 10px; /* Add padding */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center-align the list items */
+}
+
+nav ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Add right margin between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color to white */
+    font-size: 18px; /* Set font size */
+    padding: 10px 20px; /* Add padding to links */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: rgb(0, 0, 0); /* Change background color on hover */
+}
+
+
+/* Services Styles */
+
+.services-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Divide the container into four equal columns */
+    gap: 20px; /* Add gap between cards */
+    justify-content: center; /* Center-align the columns */
+    margin-top: 60px;
+}
+
+.service-card {
+    background-color: #17386844;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /*Adjust the width of the cards */
+}
+
+.service-card i {
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+.service-card div {
+    padding: 20px;
+}
+
+.service-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+/* Other Styles */
+.contact-input, textarea {
+    font-family: Arial, sans-serif;
+}
+
+.left-align {
+    text-align: left;
+}
+
+
+
+/* .service-card {
+    background-color: #17386844; */
+
+Next, the index.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Consulting LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to Blockchain Consulting LLC</h1>
+            <p>More content coming soon.</p>
+            <a href="#" class="btn" onclick="showAlert()">Get Started</a>
+        </div>
+    </div>
+
+    <script>
+        // Button message
+        function showAlert() {
+            alert("You clicked the Get Started button. It doesn't currently do anything, but it will later.");
+        }
+    </script>
+</body>
+</html>
+
+
+Next, the process.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blockchain Consulting LLC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h1>Process</h1>
+            <p>Process will be listed here soon.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+Next, the services.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Consulting LLC - Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome icons -->
+    <style>
+        /* Add custom CSS for animation */
+        .service-card {
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: transform 0.3s ease; /* Add smooth transition */
+        }
+        .service-card:hover {
+            transform: translateY(-5px); /* Move the card up by 5px on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h1>Services</h1>
+            <div class="services-columns">
+                <div class="service-card" onclick="window.location.href='customprojects.html';">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Custom Jira Projects</h2>
+                        <p>Create custom company managed projects for your team that match your SDLC.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Integration with eazyBI</h2>
+                        <p>Integrate with Jira's leading 3rd party BI tool.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Automate Time Consuming Tasks</h2>
+                        <p>Create automation to send notifications or update fields based on criteria.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Custom Workflows for your Jira Project</h2>
+                        <p>Create a Jira workflow that matches your project's SDLC.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Use Team Calendars to track Agile meetings</h2>
+                        <p>3rd Party calendar tool is very useful in tracking team meetings.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Create a Dashboard of Project Metrics</h2>
+                        <p>Use out of the box Jira metrics or a 3rd party's modules.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">No Problem Can't Be Solved</h2>
+                        <p>Wealth of knowledge of Atlassian products and relationships with Atlassian engineers means your problem will be solved.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <div>
+                        <h2 class="service-title">Agile Focused Solutions</h2>
+                        <p>Create a highly Agile project using fundamentals of Agile software development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle card animation
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
+
+Next, the customprojects.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .customproject-container {
+            max-width: 1200px; /* Limit container width */
+            margin: 0 auto; /* Center container horizontally */
+            padding: 0 20px; /* Add padding to the sides */
+        }
+
+        .customproject-content {
+            text-align: center; /* Center-align content */
+        }
+
+        .customproject-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            text-align: left; /* Left-align section content */
+        }
+
+        .customproject-section-content,
+        .customproject-section-image {
+            width: 50%; /* Adjusted width */
+        }
+
+        .customproject-image {
+            max-width: 100%; /* Make the images responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center-align images */
+        }
+
+        .customproject-bulleted-list {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            text-align: left; /* Left-align bulleted list items */
+        }
+
+        .customproject-bulleted-list-column {
+            width: 30%; /* Adjusted width */
+        }
+
+        @media (max-width: 768px) {
+            .customproject-section {
+                flex-direction: column;
+            }
+
+            .customproject-section-content,
+            .customproject-section-image {
+                width: 100%;
+            }
+
+            .customproject-bulleted-list {
+                flex-direction: column;
+            }
+
+            .customproject-bulleted-list-column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="customproject-container">
+        <div class="customproject-content">
+            <h1>Custom Projects</h1>
+            
+            <!-- First Section -->
+            <div class="customproject-section">
+                <div class="customproject-section-content">
+                    <h2>Section 1</h2>
+                    <p>Text description of the picture goes here...</p>
+                    <ul>
+                        <li>Point A</li>
+                        <li>Point B</li>
+                        <li>Point C</li>
+                    </ul>
+                </div>
+                <div class="customproject-section-image">
+                    <img class="customproject-image" src="https://www.muchbetteradventures.com/magazine/content/images/2019/06/13091225/iStock-157644719.jpg" alt="Description of the image">
+                </div>
+            </div>
+            
+            <!-- Second Section - Bulleted List -->
+            <div class="customproject-bulleted-list">
+                <div class="customproject-bulleted-list-column">
+                    <ul>
+                        <li>Point 1</li>
+                        <li>Point 2</li>
+                        <li>Point 3</li>
+                    </ul>
+                </div>
+                <div class="customproject-bulleted-list-column">
+                    <ul>
+                        <li>Point 4</li>
+                        <li>Point 5</li>
+                        <li>Point 6</li>
+                    </ul>
+                </div>
+                <div class="customproject-bulleted-list-column">
+                    <ul>
+                        <li>Point 7</li>
+                        <li>Point 8</li>
+                        <li>Point 9</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Third Section -->
+            <div class="customproject-section">
+                <div class="customproject-section-content">
+                    <h2>Section 2</h2>
+                    <p>Text description of the picture goes here...</p>
+                    <ul>
+                        <li>Point X</li>
+                        <li>Point Y</li>
+                        <li>Point Z</li>
+                    </ul>
+                </div>
+                <div class="customproject-section-image">
+                    <img class="customproject-image" src="https://www.wildnatureimages.com/images/640/070620-014-The-Tetons.jpg" alt="Description of the image">
+                </div>
+            </div>
+            
+            <!-- Repeat the above structure for other sections -->
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+Next, the about.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Consulting LLC - About</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add custom CSS for layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-padding {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100%; /* Ensure container stretches to full height */
+            padding: 0 20px; /* Add padding to the left and right edges of the container */
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; /* Ensure the container takes up full width */
+            max-width: 1200px; /* Set a max-width for the container */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        .about-content,
+        .about-image {
+            flex: 1;
+            width: 40%; /* Each division takes up 40% of the viewport width */
+        }
+
+        .about-content {
+            margin-right: 20px; /* Add spacing between the divisions */
+            text-align: center; /* Center align text */
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            width: 100%; /* Set the image width to 100% of its container */
+        }
+
+        /* Add margin-bottom to the h1 element */
+        h1 {
+            margin-bottom: 2rem; /* Reduced margin */
+            text-align: center; /* Center align the heading */
+        }
+
+        h2 {
+            margin-top: 2rem; /* Use rem units for consistent spacing */
+        }
+
+        /* Left-align bullet points */
+        .about-content ul {
+            text-align: left;
+            padding-left: 1.5rem; /* Use rem units for consistent padding */
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+
+    <div class="about-padding"> <!-- This div provides padding -->
+        <h1>About Us</h1> <!-- Center align the About Us section -->
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Our Services</h2>
+                <p>With 10+ years in the financial </p>
+                <ul>
+                    <li>Custom Jira Projects</li>
+                    <li>Integration with eazyBI</li>
+                    <li>Automate Time Consuming Tasks</li>
+                    <li>Custom Workflows for your Jira Project</li>
+                    <li>Use Team Calendars to track Agile meetings</li>
+                    <li>Create a Dashboard of Project Metrics</li>
+                    <li>No Problem Can't Be Solved</li>
+                    <li>Agile Focused Solutions</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="Images/ai business girl.jpg" alt="Image Description">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+Next, the 404.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            /* Set the background image */
+            background-image: url('https://www.catcareofvinings.com/blog/wp-content/uploads/2017/05/CCV_iStock-619079366-2000x1331.jpg');
+            /* background-image: url('./Images/404cat.jpeg'); */
+            /* Specify background properties */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background */
+            background-repeat: no-repeat; /* Do not repeat the background */
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .content {
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: rgb(35, 47, 80);
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>404 Error</h1>
+            <p>This page does not exist. But it may someday...</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+Next, the contact.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .contact-container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with your image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-content {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-message {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .contact-form {
+            margin-bottom: 20px;
+        }
+
+        .contact-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-submit {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="contact-container">
+        <div class="contact-content">
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="contact-message">We'd love to hear from you! Please fill out the form below and we'll get back to you within 24 hours.</p>
+            <p class="contact-message">If you prefer, you can also email us directly at <a href="mailto:support@blockchain-consulting.com">support@blockchain-consulting.com</a>.</p>
+
+            <form class="contact-form" action="https://formspree.io/f/mdoqgqgd" method="post">
+                <input type="text" id="contact-name" class="contact-input" name="name" placeholder="Your Name" required><br>
+
+                <input type="email" id="contact-email" class="contact-input" name="email" placeholder="Your Email Address" required><br> 
+                
+                <textarea id="contact-message" class="contact-input" name="message" rows="4" placeholder="Your Message" required></textarea><br>               
+
+                <input type="submit" value="Send Message" class="contact-submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+Next, the contact_alt.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-content {
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .contact-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-message {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .contact-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-submit {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="contact-container">
+        <div class="contact-content">
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="contact-message">We'd love to hear from you! Please fill out the form below and we'll get back to you within 24 hours.</p>
+            <p class="contact-message">If you prefer, you can also email us directly at <a href="mailto:support@blockchain-consulting.com">support@blockchain-consulting.com</a>.</p>
+
+            <form class="contact-form" action="https://formspree.io/f/mdoqgqgd" method="post">
+                <label for="contact-name">Name:</label><br>
+                <input type="text" id="contact-name" class="contact-input" name="name" required><br>
+
+                <label for="contact-email">Email Address:</label><br>
+                <input type="email" id="contact-email" class="contact-input" name="email" required><br> 
+                
+                <label for="contact-message">Message:</label><br>
+                <textarea id="contact-message" class="contact-input" name="message" rows="4" required></textarea><br>               
+
+                <input type="submit" value="Submit" class="contact-submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+Next, the aboutthiswebsite.html page:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blockchain Consulting LLC</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* CSS to create space between header and paragraph */
+            h1 {
+                margin-bottom: 100px; /* Add margin below the h1 */
+            }
+            p {
+                margin-top: 40px; /*Add margin above the paragraph */
+            }
+        </style>
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h1>About This Website</h1>
+            <p>Do you like this website? </p>
+            <p class="left-align">It won't win any awards but I did create it myself with absolutely no prior knowledge of website development.</p>
+            <p class="left-align">I created it by providing ChatGPT with detailed prompts of how I wanted it designed, then iterating through several versions until I was happy with it.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+Next, the defaultpage.html page:
+
+<!-- Don't make any changes to this page. This is only to be used to grab
+the default new page information for building a new webpage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blockchain Consulting LLC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h1>Process</h1>
+            <p>Process will be listed here soon.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+Do you see any CSS conflicts among all of these pages that should be resolved?
