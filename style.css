@@ -22,7 +22,8 @@ body, html {
 }
 
 .content {
-    max-width: 600px;
+    max-width: 90%; /* Adjusted max-width to take up 90% of the screen width */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 h1 {
@@ -83,9 +84,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content {
-    max-width: 90%; /* Adjusted max-width to take up 90% of the screen width */
-    margin: 0 auto; /* Center the container horizontally */
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    .service-card {
+        width: 90%; /* Set width to 90% for single column layout on mobile */
+    }
 }
 
 .service-card i {
