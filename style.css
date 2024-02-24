@@ -1,4 +1,5 @@
-body {
+/* Common styles */
+body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -9,12 +10,11 @@ body {
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background */
     background-repeat: no-repeat; /* Do not repeat the background */
-    color: #333;
 }
 
 .container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Change height to min-height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,68 +36,56 @@ p {
     margin-bottom: 30px;
 }
 
-.btn {
+/* Navigation styles */
+nav {
+    background-color: rgb(35, 47, 80);
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+nav ul li a {
     text-decoration: none;
     color: #fff;
-    background-color: rgb(35, 47, 80);
+    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #000000;
-}
-
-/* Navigation styles */
-nav {
-    background-color: rgb(35, 47, 80); /* Set background color */
-    padding: 10px; /* Add padding */
-}
-
-nav ul {
-    list-style-type: none; /* Remove default list styles */
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Center-align the list items */
-}
-
-nav ul li {
-    display: inline-block; /* Display list items horizontally */
-    margin-right: 20px; /* Add right margin between items */
-}
-
-nav ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* Set text color to white */
-    font-size: 18px; /* Set font size */
-    padding: 10px 20px; /* Add padding to links */
-    border-radius: 5px; /* Add rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
 nav ul li a:hover {
-    background-color: rgb(0, 0, 0); /* Change background color on hover */
+    background-color: rgb(0, 0, 0);
 }
 
-
-/* Services Styles */
-
+/* Service cards */
 .services-columns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Divide the container into four equal columns */
-    gap: 20px; /* Add gap between cards */
-    justify-content: center; /* Center-align the columns */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 60px;
 }
 
 .service-card {
+    width: calc(25% - 20px); /* Adjust the width of each card to fit four cards in a row with a 20px gap */
+    margin-bottom: 20px;
     background-color: #17386844;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px; /*Adjust the width of the cards */
+}
+
+.content {
+    max-width: 90%; /* Adjusted max-width to take up 90% of the screen width */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .service-card i {
@@ -114,7 +102,6 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-
 /* Other Styles */
 .contact-input, textarea {
     font-family: Arial, sans-serif;
@@ -124,7 +111,7 @@ nav ul li a:hover {
     text-align: left;
 }
 
-
-
-/* .service-card {
-    background-color: #17386844; */
+/* Custom animation for service cards */
+.service-card:hover {
+    transform: translateY(-5px);
+}
