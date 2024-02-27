@@ -20,16 +20,24 @@
             border: 2px solid #333;
             border-radius: 10px;
             position: relative;
+            overflow: hidden; /* Prevent overflow */
         }
         .player {
             width: 50px;
             height: 50px;
             background-color: red;
             position: absolute;
-            bottom: 0;
-            left: 0;
+            bottom: calc(50% - 25px); /* Start in the middle vertically */
+            left: calc(50% - 25px); /* Start in the middle horizontally */
             border-radius: 50%;
-            transition: left 0.3s ease;
+            transition: transform 0.3s ease;
+        }
+        .message {
+            position: absolute;
+            display: none;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -48,6 +56,11 @@
     <div class="game-container">
         <div class="game" id="game">
             <div class="player" id="player"></div>
+            <div class="message top-left" id="topLeftMessage">You've found the top left corner, what will you do now?</div>
+            <div class="message top-right" id="topRightMessage">You've found the top right corner, what will you do now?</div>
+            <div class="message bottom-left" id="bottomLeftMessage">You've found the bottom left corner, what will you do now?</div>
+            <div class="message bottom-right" id="bottomRightMessage">You've found the bottom right corner, what will you do now?</div>
+            <div class="message all-corners" id="allCornersMessage">You have visited all corners but there is one task left. Can you figure it out?</div>
         </div>
     </div>
 
@@ -55,29 +68,109 @@
         // JavaScript elements
         const player = document.getElementById('player');
         const game = document.getElementById('game');
+        const topLeftMessage = document.getElementById('topLeftMessage');
+        const topRightMessage = document.getElementById('topRightMessage');
+        const bottomLeftMessage = document.getElementById('bottomLeftMessage');
+        const bottomRightMessage = document.getElementById('bottomRightMessage');
+        const allCornersMessage = document.getElementById('allCornersMessage');
         let gameWidth = game.offsetWidth;
+        let gameHeight = game.offsetHeight;
         let playerWidth = player.offsetWidth;
-        let isMovingLeft = false;
+        let playerHeight = player.offsetHeight;
+        let playerLeft = gameWidth / 2 - playerWidth / 2;
+        let playerTop = gameHeight / 2 - playerHeight / 2;
+        let cornersVisited = {
+            topLeft: false,
+            topRight: false,
+            bottomLeft: false,
+            bottomRight: false
+        };
+
+        player.style.left = playerLeft + 'px';
+        player.style.top = playerTop + 'px';
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === 'ArrowLeft' && !isMovingLeft) {
-                isMovingLeft = true;
-                moveLeft();
-            }
-        });
-
-        document.addEventListener('keyup', function(event) {
             if (event.key === 'ArrowLeft') {
-                isMovingLeft = false;
+                moveLeft();
+            } else if (event.key === 'ArrowRight') {
+                moveRight();
+            } else if (event.key === 'ArrowUp') {
+                moveUp();
+            } else if (event.key === 'ArrowDown') {
+                moveDown();
             }
         });
 
         function moveLeft() {
-            const playerLeft = player.offsetLeft;
             if (playerLeft >= 10) {
-                player.style.left = playerLeft - 10 + 'px';
+                playerLeft -= 10;
+                player.style.left = playerLeft + 'px';
+                checkPosition();
             }
-            requestAnimationFrame(moveLeft);
+        }
+
+        function moveRight() {
+            if (playerLeft + playerWidth <= gameWidth - 10) {
+                playerLeft += 10;
+                player.style.left = playerLeft + 'px';
+                checkPosition();
+            }
+        }
+
+        function moveUp() {
+            if (playerTop >= 10) {
+                playerTop -= 10;
+                player.style.top = playerTop + 'px';
+                checkPosition();
+            }
+        }
+
+        function moveDown() {
+            if (playerTop + playerHeight <= gameHeight - 10) {
+                playerTop += 10;
+                player.style.top = playerTop + 'px';
+                checkPosition();
+            }
+        }
+
+        function checkPosition() {
+            if (playerLeft <= 10 && playerTop <= 10) {
+                topLeftMessage.style.display = 'block';
+                cornersVisited.topLeft = true;
+            } else {
+                topLeftMessage.style.display = 'none';
+            }
+
+            if (playerLeft + playerWidth >= gameWidth - 10 && playerTop <= 10) {
+                topRightMessage.style.display = 'block';
+                cornersVisited.topRight = true;
+            } else {
+                topRightMessage.style.display = 'none';
+            }
+
+            if (playerLeft <= 10 && playerTop + playerHeight >= gameHeight - 10) {
+                bottomLeftMessage.style.display = 'block';
+                cornersVisited.bottomLeft = true;
+            } else {
+                bottomLeftMessage.style.display = 'none';
+            }
+
+            if (playerLeft + playerWidth >= gameWidth - 10 && playerTop + playerHeight >= gameHeight - 10) {
+                bottomRightMessage.style.display = 'block';
+                cornersVisited.bottomRight = true;
+            } else {
+                bottomRightMessage.style.display = 'none';
+            }
+
+            if (cornersVisited.topLeft && cornersVisited.topRight && cornersVisited.bottomLeft && cornersVisited.bottomRight) {
+                allCornersMessage.style.display = 'block';
+                topLeftMessage.style.display = 'none';
+                topRightMessage.style.display = 'none';
+                bottomLeftMessage.style.display = 'none';
+                bottomRightMessage.style.display = 'none';
+            } else {
+                allCornersMessage.style.display = 'none';
+            }
         }
     </script>
 </body>
