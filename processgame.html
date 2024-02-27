@@ -61,6 +61,7 @@
             <div class="message bottom-left" id="bottomLeftMessage">You've found the bottom left corner, what will you do now?</div>
             <div class="message bottom-right" id="bottomRightMessage">You've found the bottom right corner, what will you do now?</div>
             <div class="message all-corners" id="allCornersMessage">You have visited all corners but there is one task left. Can you figure it out?</div>
+            <div class="message home" id="homeMessage">You have returned the ball home, and have won the game! Congratulations!</div>
         </div>
     </div>
 
@@ -73,6 +74,7 @@
         const bottomLeftMessage = document.getElementById('bottomLeftMessage');
         const bottomRightMessage = document.getElementById('bottomRightMessage');
         const allCornersMessage = document.getElementById('allCornersMessage');
+        const homeMessage = document.getElementById('homeMessage');
         let gameWidth = game.offsetWidth;
         let gameHeight = game.offsetHeight;
         let playerWidth = player.offsetWidth;
@@ -85,6 +87,7 @@
             bottomLeft: false,
             bottomRight: false
         };
+        let allCornersVisited = false; // Flag to track if all corners have been visited
 
         player.style.left = playerLeft + 'px';
         player.style.top = playerTop + 'px';
@@ -162,7 +165,9 @@
                 bottomRightMessage.style.display = 'none';
             }
 
+            // Check if all four corners have been visited
             if (cornersVisited.topLeft && cornersVisited.topRight && cornersVisited.bottomLeft && cornersVisited.bottomRight) {
+                allCornersVisited = true;
                 allCornersMessage.style.display = 'block';
                 topLeftMessage.style.display = 'none';
                 topRightMessage.style.display = 'none';
@@ -170,6 +175,13 @@
                 bottomRightMessage.style.display = 'none';
             } else {
                 allCornersMessage.style.display = 'none';
+            }
+
+            // Check if the player has returned home after visiting all corners
+            if (allCornersVisited && playerLeft === gameWidth / 2 - playerWidth / 2 && playerTop === gameHeight / 2 - playerHeight / 2) {
+                homeMessage.style.display = 'block';
+            } else {
+                homeMessage.style.display = 'none';
             }
         }
     </script>
