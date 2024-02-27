@@ -15,20 +15,20 @@
             height: 100vh;
         }
         .game {
+            position: relative;
             width: 400px;
             height: 400px;
             border: 2px solid #333;
             border-radius: 10px;
-            position: relative;
-            overflow: hidden; /* Prevent overflow */
+            overflow: hidden;
         }
         .player {
             width: 50px;
             height: 50px;
             background-color: red;
             position: absolute;
-            bottom: calc(50% - 25px); /* Start in the middle vertically */
-            left: calc(50% - 25px); /* Start in the middle horizontally */
+            bottom: calc(50% - 25px);
+            left: calc(50% - 25px);
             border-radius: 50%;
             transition: transform 0.3s ease;
         }
@@ -38,6 +38,19 @@
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
+        }
+        #replayButton {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 50px);
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -62,6 +75,7 @@
             <div class="message bottom-right" id="bottomRightMessage">You've found the bottom right corner, what will you do now?</div>
             <div class="message all-corners" id="allCornersMessage">You have visited all corners but there is one task left. Can you figure it out?</div>
             <div class="message home" id="homeMessage">You have returned the ball home, and have won the game! Congratulations!</div>
+            <button id="replayButton" onclick="restartGame()">Replay</button>
         </div>
     </div>
 
@@ -75,6 +89,7 @@
         const bottomRightMessage = document.getElementById('bottomRightMessage');
         const allCornersMessage = document.getElementById('allCornersMessage');
         const homeMessage = document.getElementById('homeMessage');
+        const replayButton = document.getElementById('replayButton');
         let gameWidth = game.offsetWidth;
         let gameHeight = game.offsetHeight;
         let playerWidth = player.offsetWidth;
@@ -88,19 +103,22 @@
             bottomRight: false
         };
         let allCornersVisited = false; // Flag to track if all corners have been visited
+        let gameOver = false; // Flag to track if the game is over
 
         player.style.left = playerLeft + 'px';
         player.style.top = playerTop + 'px';
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === 'ArrowLeft') {
-                moveLeft();
-            } else if (event.key === 'ArrowRight') {
-                moveRight();
-            } else if (event.key === 'ArrowUp') {
-                moveUp();
-            } else if (event.key === 'ArrowDown') {
-                moveDown();
+            if (!gameOver) { // Check if the game is over before allowing movement
+                if (event.key === 'ArrowLeft') {
+                    moveLeft();
+                } else if (event.key === 'ArrowRight') {
+                    moveRight();
+                } else if (event.key === 'ArrowUp') {
+                    moveUp();
+                } else if (event.key === 'ArrowDown') {
+                    moveDown();
+                }
             }
         });
 
@@ -181,9 +199,16 @@
             if (allCornersVisited && playerLeft === gameWidth / 2 - playerWidth / 2 && playerTop === gameHeight / 2 - playerHeight / 2) {
                 homeMessage.style.display = 'block';
                 allCornersMessage.style.display = 'none'; // Hide the "You have visited all corners" message
+                gameOver = true; // Set game over flag
+                replayButton.style.display = 'block'; // Show replay button
             } else {
                 homeMessage.style.display = 'none';
             }
+        }
+
+        // Function to restart the game
+        function restartGame() {
+            window.location.reload(); // Reload the page to restart the game
         }
     </script>
 </body>
