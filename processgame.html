@@ -180,6 +180,7 @@
             // Check if the player has returned home after visiting all corners
             if (allCornersVisited && playerLeft === gameWidth / 2 - playerWidth / 2 && playerTop === gameHeight / 2 - playerHeight / 2) {
                 homeMessage.style.display = 'block';
+                allCornersMessage.style.display = 'none'; // Hide the "You have visited all corners" message
             } else {
                 homeMessage.style.display = 'none';
             }
