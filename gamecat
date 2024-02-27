@@ -75,7 +75,7 @@
             <div class="message bottom-left" id="bottomLeftMessage">You've found the bottom left corner, what will you do now?</div>
             <div class="message bottom-right" id="bottomRightMessage">You've found the bottom right corner, what will you do now?</div>
             <div class="message all-corners" id="allCornersMessage">You have visited all corners but there is one task left. Can you figure it out?</div>
-            <div class="message home" id="homeMessage">You have returned the ball home, and have won the game! Congratulations!</div>
+            <div class="message home" id="homeMessage">You have returned the cat home, and have won the game! Congratulations!</div>
             <button id="replayButton" onclick="restartGame()">Replay</button>
         </div>
     </div>
