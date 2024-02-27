@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Consulting LLC - Process</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navigation.css">
+    <style>
+        /* Your CSS styles here */
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .game {
+            width: 400px;
+            height: 400px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            position: relative;
+        }
+        .player {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            transition: left 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </nav>
+    
+    <div class="game-container">
+        <div class="game" id="game">
+            <div class="player" id="player"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript elements
+        const player = document.getElementById('player');
+        const game = document.getElementById('game');
+        let gameWidth = game.offsetWidth;
+        let playerWidth = player.offsetWidth;
+        let isMovingLeft = false;
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft' && !isMovingLeft) {
+                isMovingLeft = true;
+                moveLeft();
+            }
+        });
+
+        document.addEventListener('keyup', function(event) {
+            if (event.key === 'ArrowLeft') {
+                isMovingLeft = false;
+            }
+        });
+
+        function moveLeft() {
+            const playerLeft = player.offsetLeft;
+            if (playerLeft >= 10) {
+                player.style.left = playerLeft - 10 + 'px';
+            }
+            requestAnimationFrame(moveLeft);
+        }
+    </script>
+</body>
+</html>
