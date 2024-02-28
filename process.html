@@ -9,7 +9,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            color: #333;
+            color: #333333;
             margin: 0;
             padding: 0;
         }
@@ -20,21 +20,27 @@
             justify-content: center;
             height: 100vh; /* Set container height to viewport height */
         }
+        .process-header {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #133e7700;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+            text-align: center;
+            color: rgb(35, 47, 80);
+            margin-bottom: 20px;
+        }
         .process-content {
             max-width: 800px;
             padding: 20px;
-            background-color: #fff;
+            background-color: #133e772d;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .process-content h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
         }
         .process-content p {
             line-height: 1.6;
             margin-bottom: 15px;
+            color: #323232; /* Adjust text color */
         }
         .process-content ol {
             padding-left: 20px;
@@ -57,8 +63,10 @@
     </nav>
     
     <div class="process-container">
-        <div class="process-content">
+        <div class="process-header">
             <h1>Our Process</h1>
+        </div>
+        <div class="process-content">
             <p>If you're interested in our consulting services for Atlassian products like Jira, Confluence, and Bitbucket, here's how our process works:</p>
             <ol>
                 <li>Contact Us: Fill out the form on our website to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
