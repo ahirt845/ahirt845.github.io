@@ -6,6 +6,66 @@
     <title>Blockchain Consulting LLC</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Common styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: rgb(35, 47, 80);
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: rgb(0, 0, 0);
+        }
+        /* Container styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; /* Adjust top margin as needed */
+        }
+        .content {
+            max-width: 80%; /* Adjust max-width as needed */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 0 20px; /* Adjust padding as needed */
+        }
+        .header-container {
+            width: 100%;
+            text-align: center; /* Center align text */
+            margin-bottom: 50px; /* Adjust bottom margin as needed */
+        }
+        .paragraph-container {
+            width: 100%; /* Adjust width as needed */
+            text-align: center; /* Center align text horizontally */
+            margin-bottom: 50px; /* Adjust bottom margin as needed */
+        }
+        .paragraph-container p {
+            text-align: left; /* Left align paragraph text */
+        }
+        .button-container {
+            width: 100%;
+            text-align: center; /* Center align text */
+        }
         .index-btn {
             display: inline-block;
             padding: 10px 20px;
@@ -36,9 +96,17 @@
 
     <div class="container">
         <div class="content">
-            <h1>Welcome to Blockchain Consulting LLC</h1>
-            <p>More content coming soon.</p>
-            <a href="#" class="index-btn" onclick="showAlert()">Get Started</a>
+            <div class="header-container">
+                <h1>Welcome to Blockchain Consulting LLC</h1>
+            </div>
+            <div class="paragraph-container">
+                <p>At Blockchain Consulting LLC, we specialize in program and project management services tailored for Agile software development environments. With expertise in Agile methodologies like Scrum and Kanban, we ensure efficient project delivery while maintaining flexibility and adaptability to changing requirements.</p>
+                <p>In addition, we offer specialized support for Atlassian products including Jira, Confluence, and Bitbucket, as well as various third-party marketplace providers. Our comprehensive support services encompass customization, integration, optimization, and troubleshooting to maximize the effectiveness of your Atlassian tools suite.</p>
+                <p>With a focus on delivering high-quality solutions and enhancing collaboration within your organization, Blockchain Consulting LLC is your trusted partner for streamlined project management and Atlassian product support.</p>
+            </div>
+            <div class="button-container">
+                <a href="#" class="index-btn" onclick="showAlert()">Get Started</a>
+            </div>
         </div>
     </div>
 
