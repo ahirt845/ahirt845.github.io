@@ -74,6 +74,12 @@
             text-align: left;
             padding-left: 1.5rem; /* Use rem units for consistent padding */
         }
+
+        /* New container for h1 and paragraphs */
+        .about-text-container {
+            width: 80; /* Set width to 50% */
+            margin: 0 auto; /* Center horizontally */
+        }
     </style>
 </head>
 <body>
@@ -89,9 +95,11 @@
     </nav>
 
     <div class="about-padding"> <!-- This div provides padding -->
-        <h1>About Us</h1> <!-- Center align the About Us section -->
-        <p>We have more than 10+ years leading software teams working in: financial technology, government contracting, and nonprofits.</p>
-        <p>PMP and CSM certified, we can train your project teams to deliver high quality products efficiently and often utilizing industry leading Agile methodologies.</p>
+        <div class="about-text-container"> <!-- New container for h1 and paragraphs -->
+            <h1>About Us</h1> <!-- Center align the About Us section -->
+            <p>We have more than 10+ years leading software teams working in: financial technology, government contracting, and nonprofits.</p>
+            <p>PMP and CSM certified, we can train your project teams to deliver high quality products efficiently and often utilizing industry leading Agile methodologies.</p>
+        </div>
         <div class="about-container">
             <div class="about-content">
                 <h2>Our Services</h2>
