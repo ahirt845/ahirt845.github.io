@@ -31,29 +31,20 @@
             margin-bottom: 20px;
         }
         .process-content {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px; /* Gap between cells */
             max-width: 80%;
             padding: 20px;
             background-color: #133e772d;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .process-left {
-            flex: 1;
-            padding-right: 20px;
-        }
-        .process-right {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         .process-content p {
             line-height: 1.6;
             margin-bottom: 15px;
             color: #202020; /* Adjust text color */
+            grid-column: span 2; /* Span across both columns */
         }
         .process-content ol {
             padding-left: 20px;
@@ -84,17 +75,15 @@
             <h1>Our Process</h1>
         </div>
         <div class="process-content">
-            <div class="process-left">
-                <p>If you're interested in our consulting services for Atlassian products like Jira, Confluence, and Bitbucket, here's how our process works:</p>
-                <ol>
-                    <li>Contact Us: Fill out the form on our website to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
-                    <li>Schedule Consultation: We'll schedule a free initial consultation with you, which can be conducted over the phone, via a face-to-face web call, or in person if you're located in the Washington DC area.</li>
-                    <li>Discuss Needs: During the consultation, you can explain your problem, pain points, and what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
-                    <li>Access Level: The level of access you provide to us (e.g., admin access to your Jira account) will impact the time required to complete the tasks. We can work directly or guide your team through the process.</li>
-                    <li>Work Completion: Once the work is completed, we'll send an invoice to your accounting and finance team for payment. We operate on an ad hoc basis without retainer requirements or minimum work hours.</li>
-                </ol>
-            </div>
-            <div class="process-right">
+            <p>If you're interested in our consulting services for Atlassian products like Jira, Confluence, and Bitbucket, here's how our process works:</p>
+            <ol>
+                <li>Contact Us: Fill out the form on our website to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
+                <li>Schedule Consultation: We'll schedule a free initial consultation with you, which can be conducted over the phone, via a face-to-face web call, or in person if you're located in the Washington DC area.</li>
+                <li>Discuss Needs: During the consultation, you can explain your problem, pain points, and what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
+                <li>Access Level: The level of access you provide to us (e.g., admin access to your Jira account) will impact the time required to complete the tasks. We can work directly or guide your team through the process.</li>
+                <li>Work Completion: Once the work is completed, we'll send an invoice to your accounting and finance team for payment. We operate on an ad hoc basis without retainer requirements or minimum work hours.</li>
+            </ol>
+            <div>
                 <img src="/Images/SCRUMmeeting.png" alt="Process Image" class="process-image">
             </div>
         </div>
