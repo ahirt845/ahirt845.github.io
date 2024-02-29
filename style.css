@@ -79,7 +79,7 @@ nav ul li a:hover {
 .service-card {
     width: calc(25% - 20px); /* Adjust the width of each card to fit four cards in a row with a 20px gap */
     margin-bottom: 20px;
-    background-color: #17386844;
+    background-color: #ffffffa3;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
