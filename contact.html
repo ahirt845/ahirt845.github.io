@@ -14,24 +14,24 @@
             background-color: #f9f9f9;
         }
 
-        .contact-container {
-            height: 100%;
+        .container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            background-image: url('background.jpg'); /* Replace 'background.jpg' with your image */
-            background-size: cover;
-            background-position: center;
+            height: 100%;
         }
 
-        .contact-content {
+        .contact-content,
+        .additional-info {
             width: 80%;
             max-width: 800px;
             padding: 20px;
             background-color: #ffffffcd;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         .contact-title {
@@ -72,6 +72,19 @@
         .contact-submit:hover {
             background-color: #0056b3;
         }
+
+        .additional-info h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .additional-info p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #202020;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -85,8 +98,8 @@
             <!-- Add more links as needed -->
         </ul>
     </nav>
-    
-    <div class="contact-container">
+
+    <div class="container">
         <div class="contact-content">
             <h1 class="contact-title">Contact Us</h1>
             <p class="contact-message">We'd love to hear from you! Please fill out the form below and we'll get back to you within 24 hours.</p>
@@ -101,6 +114,11 @@
 
                 <input type="submit" value="Send Message" class="contact-submit">
             </form>
+        </div>
+
+        <div class="additional-info">
+            <h2>Some Considerations</h2>
+            <p>If you have any additional considerations, feel free to include them here.</p>
         </div>
     </div>
 </body>
