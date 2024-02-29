@@ -45,13 +45,16 @@
             margin-bottom: 15px;
             color: #202020; /* Adjust text color */
             grid-column: span 2; /* Span across both columns */
+            text-align: left;
+        }
+        .process-content p.center {
+            text-align: center; /* Center align the paragraph */
         }
         .process-content ol {
             padding-left: 20px;
         }
         .process-content ol li {
-            margin-bottom: 30px;
-            margin-right: 20px; /* Add right margin for horizontal space */
+            margin-bottom: 30px; /* Increased margin for better separation */
         }
         .process-image {
             max-width: 100%;
@@ -75,18 +78,32 @@
         <div class="process-header">
             <h1>Our Process</h1>
         </div>
-        <div class="process-content">
+        <div class="process-content" style="margin-bottom: 30px;">
             <p>If you are interested in our consulting services, you will be pleased to know our process is straightforward and flexible to meet your needs.</p>
             <ol>
-                <li><b>Contact Us:</b> Fill out the <a href="contact.html">form</a> on the Contact page to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
-                <li><b>Schedule Consultation:</b> We'll schedule a free initial consultation with you, which can be conducted over the phone, via a face-to-face web call, or in person if you're located in the Washington DC area.</li>
-                <li><b>Discuss Needs:</b> During the consultation, you can explain your problem, pain points, and what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
+                <li><b>Contact Us:</b> Fill out this <a href="contact.html">form</a> on our Contact page to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
+                <li><b>Schedule Consultation:</b> We'll schedule a free initial consultation with you, which can be conducted over the phone, virtual meeting (Zoom, etc), or in person if you're located in the Washington DC area.</li>
+                <li><b>Discuss Needs:</b> During the consultation we will discuss your business and projects, pain points, and in general what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
                 <li><b>Access Level:</b> The level of access you provide to us (e.g., admin access to your Jira account) will impact the time required to complete the tasks. We can work directly or guide your team through the process.</li>
                 <li><b>Work Completion:</b> Once the work is completed, we'll send an invoice to your accounting and finance team for payment. We operate on an ad hoc basis without retainer requirements or minimum work hours.</li>
             </ol>
             <div>
                 <img src="/Images/SCRUMmeeting.png" alt="Process Image" class="process-image">
             </div>
+        </div>
+
+        <!-- New section -->
+        <div class="process-content">
+            <p class="center">Some Considerations</p>
+            <div>
+                <img src="/Images/stickynotes.jpeg" alt="Image Description" class="process-image">
+            </div>
+            <ol>
+                <li><b>Step 1:</b> Description of step 1.</li>
+                <li><b>Step 2:</b> Description of step 2.</li>
+                <li><b>Step 3:</b> Description of step 3.</li>
+                <!-- Add more steps as needed -->
+            </ol>
         </div>
     </div>
 </body>
