@@ -47,6 +47,13 @@
             grid-column: span 2; /* Span across both columns */
             text-align: left;
         }
+        .process-content h2 {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #202020; /* Adjust text color */
+            grid-column: span 2; /* Span across both columns */
+            text-align: center;
+        }
         .process-content p.center {
             text-align: center; /* Center align the paragraph */
         }
@@ -54,6 +61,12 @@
             padding-left: 20px;
         }
         .process-content ol li {
+            margin-bottom: 30px; /* Increased margin for better separation */
+        }
+        .process-content ul {
+            padding-left: 20px;
+        }
+        .process-content ul li {
             margin-bottom: 30px; /* Increased margin for better separation */
         }
         .process-image {
@@ -84,8 +97,9 @@
                 <li><b>Contact Us:</b> Fill out this <a href="contact.html">form</a> on our Contact page to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
                 <li><b>Schedule Consultation:</b> We'll schedule a free initial consultation with you, which can be conducted over the phone, virtual meeting (Zoom, etc), or in person if you're located in the Washington DC area.</li>
                 <li><b>Discuss Needs:</b> During the consultation we will discuss your business and projects, pain points, and in general what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
-                <li><b>Access Level:</b> The level of access you provide to us (e.g., admin access to your Jira account) will impact the time required to complete the tasks. We can work directly or guide your team through the process.</li>
-                <li><b>Work Completion:</b> Once the work is completed, we'll send an invoice to your accounting and finance team for payment. We operate on an ad hoc basis without retainer requirements or minimum work hours.</li>
+                <li><b>Perform Work:</b> Our team will complete all work items ensuring we meet all scope, time, and cost requirements.</li>
+                <li><b>Review Work:</b> After the work is complete, we will review it with you to ensure you are completely satisfied. If not, we will discuss and perform further changes.</li>
+                <li><b>Work Completion:</b> Once the work is completed, we'll send an invoice to your accounting and finance team for payment.</li>
             </ol>
             <div>
                 <img src="/Images/SCRUMmeeting.png" alt="Process Image" class="process-image">
@@ -94,16 +108,17 @@
 
         <!-- New section -->
         <div class="process-content">
-            <p class="center">Some Considerations</p>
+            <!-- <p class="center">Some Considerations</p> -->
+            <h2>Some Considerations</h2>
             <div>
                 <img src="/Images/stickynotes.jpeg" alt="Image Description" class="process-image">
             </div>
-            <ol>
-                <li><b>Step 1:</b> Description of step 1.</li>
-                <li><b>Step 2:</b> Description of step 2.</li>
-                <li><b>Step 3:</b> Description of step 3.</li>
+            <ul>
+                <li><b>Access / Permissions:</b> The level of access you provide to us (e.g., admin access to your Atlassian account) will impact the time required to complete the tasks. Having an admin account where we can troubleshoot and perform the steps ourselves will be much faster than guiding a member of your team through the process.  </li>
+                <li><b>Level of Involvement:</b> We can spin up a new fully custom Jira project with little understanding of your project. In contrast, running a successful Daily Scrum meeting involves a much deeper understanding of the project and team.</li>
+                <li><b>Availability:</b> Our team is located in Northern Virginia, just outside of Washington, DC. Our core hours are Eastern Standard Time 9am - 6pm, but we can be available outside of those core hours with notice. </li>
                 <!-- Add more steps as needed -->
-            </ol>
+            </ul>
         </div>
     </div>
 </body>
