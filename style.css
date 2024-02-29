@@ -10,6 +10,7 @@ body, html {
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background */
     background-repeat: no-repeat; /* Do not repeat the background */
+    background-attachment: fixed; /* Keep the background image fixed */
 }
 
 .container {
