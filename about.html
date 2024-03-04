@@ -8,7 +8,7 @@
     <style>
         /* Add custom CSS for layout */
         body, html {
-            height: 100%;
+            min-height: 100vh; /* Ensure full viewport height */
             margin: 0;
             padding: 0;
         }
@@ -16,36 +16,46 @@
         .about-padding {
             display: flex; /* Use flexbox */
             justify-content: center; /* Center horizontally */
-            align-items: left; /* Center vertically */
-            height: 100%; /* Ensure container stretches to full height */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure container doesn't collapse */
             padding: 0 100px; /* Add padding to the left and right edges of the container */
             flex-direction: column; /* Stack items vertically */
         }
 
         .about-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%; /* Ensure the container takes up full width */
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px; /* Gap between cells */
+            width: 100%; /* Increase width to 80% */
             max-width: 1200px; /* Set a max-width for the container */
-            margin: 0 auto; /* Center the container horizontally */
-        }
-
-        .about-content,
-        .about-image {
-            flex: 1;
-            width: 40%; /* Each division takes up 40% of the viewport width */
+            margin: 20px auto; /* Center the container horizontally */
+            background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
         }
 
         .about-content {
-            margin-right: 20px; /* Add spacing between the divisions */
-            text-align: center; /* Center align text */
+            grid-column: 1 / span 2; /* Span both columns */
+            text-align: center; /* Center align content */
+        }
+
+        .about-services {
+            grid-column: 1 / span 1; /* Span first column */
+        }
+
+        .about-services-heading {
+            text-align: center; /* Center align the "Our Services" heading */
+        }
+
+        .about-image {
+            grid-column: 2 / span 1; /* Span second column */
+            text-align: center; /* Center align content */
         }
 
         .about-image img {
             max-width: 100%;
             height: auto;
-            width: 100%; /* Set the image width to 100% of its container */
+            border-radius: 10px; /* Rounded corners */
         }
 
         /* Add margin-top and margin-bottom to the h1 element */
@@ -55,31 +65,26 @@
             text-align: center; /* Center align the heading */
         }
 
-        h2 {
-            margin-top: 2rem; /* Use rem units for consistent spacing */
-        }
-
         /* Adjust margin-bottom for specific paragraphs */
-        .about-padding p:nth-of-type(1) {
-            margin-bottom: 1px; /* Adjust the margin-bottom here */
-            margin-top: 0px;
-        }
-
-        .about-padding p:nth-of-type(2) {
-            margin-bottom: 30px; /* Adjust the margin-bottom here */
-            margin-top: 10px;
+        .about-padding p {
+            margin-bottom: 10px; /* Adjust the margin-bottom here */
         }
 
         /* Left-align bullet points */
         .about-content ul {
             text-align: left;
-            padding-left: 1.5rem; /* Use rem units for consistent padding */
+            padding-left: 20px; /* Adjust padding */
         }
 
         /* New container for h1 and paragraphs */
         .about-text-container {
-            width: 80; /* Set width to 50% */
+            width: 100%; /* Set width to 100% */
             margin: 0 auto; /* Center horizontally */
+        }
+
+        /* Left-align specific paragraphs inside .about-content */
+        .about-content p {
+            text-align: left;
         }
     </style>
 </head>
@@ -98,39 +103,41 @@
     <div class="about-padding"> <!-- This div provides padding -->
         <div class="about-text-container"> <!-- New container for h1 and paragraphs -->
             <h1>About Us</h1> <!-- Center align the About Us section -->
-            <p>We have more than 10+ years leading software teams working in: financial technology, government contracting, and nonprofits.</p>
-            <p>PMP and CSM certified, we can train your project teams to deliver high quality products efficiently and often utilizing industry leading Agile methodologies.</p>
-        </div>
-        <div class="about-container">
-            <div class="about-content">
-                <h2>Our Services</h2>
-                <p>NEW - Atlassian Product Suite Consulting</p>
-                <ul>
-                    <li>Create custom Jira projects utilizing Agile principles that match your SDLC.</li>
-                    <li>Utilize Automation tools to reduce time consuming tasks.</li>
-                    <li>Enhance team reporting using Dashboards and 3rd party BI tools like eazyBI.</li>
-                    <li>Solve any problem with wealth of knowledge of Atlassian products.</li>
-                    <li>Support and advice about 3rd party add on tools to enhance Jira, Confluence, or Bitbucket environments.</li>
-                </ul>
-                <p>Program Management Consulting</p>
-                <ul>
-                    <li>Strategic alignment of project goals with enterprise-level strategy.</li>
-                    <li>Establishment of project prioritzation criteria and methodology.</li>
-                    <li>Oversight of project portfolio, resource allocation, and budget management.</li>
-                    <li>Implementation of project review processes and issue resolution frameworks.</li>
-                    <li>Rollout of project methodology and tools, along with ongoing guidance and training.</li>
-                </ul>
-                <p>Project Management Consulting</p>
-                <ul>
-                    <li>Expertise in Agile methodologies including DevOps, Kanban, and Scrum.</li>
-                    <li>Training and implementation of best project management practices.</li>
-                    <li>AWS environment improvement and SOC report creation.</li>
-                    <li>CUstom Change Approval Board (CAB) processes development.</li>
-                    <li>Management of AWS accounts and relationship with cloud operations teams.</li>
-                </ul>
-            </div>
-            <div class="about-image">
-                <img src="Images/ai business girl.jpg" alt="Image Description">
+            <div class="about-container">
+                <div class="about-content">
+                    <p>We have more than 10+ years leading software teams working in: financial technology, government contracting, and nonprofits.</p>
+                    <p>PMP and CSM certified, we can train your project teams to deliver high quality products efficiently and often utilizing industry leading Agile methodologies.</p>
+                </div>
+                <div class="about-services">
+                    <h2 class="about-services-heading">Our Services</h2>
+                    <p>NEW - Atlassian Product Suite Consulting</p>
+                    <ul>
+                        <li>Create custom Jira projects utilizing Agile principles that match your SDLC.</li>
+                        <li>Utilize Automation tools to reduce time consuming tasks.</li>
+                        <li>Enhance team reporting using Dashboards and 3rd party BI tools like eazyBI.</li>
+                        <li>Solve any problem with wealth of knowledge of Atlassian products.</li>
+                        <li>Support and advice about 3rd party add on tools to enhance Jira, Confluence, or Bitbucket environments.</li>
+                    </ul>
+                    <p>Program Management Consulting</p>
+                    <ul>
+                        <li>Strategic alignment of project goals with enterprise-level strategy.</li>
+                        <li>Establishment of project prioritzation criteria and methodology.</li>
+                        <li>Oversight of project portfolio, resource allocation, and budget management.</li>
+                        <li>Implementation of project review processes and issue resolution frameworks.</li>
+                        <li>Rollout of project methodology and tools, along with ongoing guidance and training.</li>
+                    </ul>
+                    <p>Project Management Consulting</p>
+                    <ul>
+                        <li>Expertise in Agile methodologies including DevOps, Kanban, and Scrum.</li>
+                        <li>Training and implementation of best project management practices.</li>
+                        <li>AWS environment improvement and SOC report creation.</li>
+                        <li>CUstom Change Approval Board (CAB) processes development.</li>
+                        <li>Management of AWS accounts and relationship with cloud operations teams.</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="Images/ai business girl.jpg" alt="Image Description">
+                </div>
             </div>
         </div>
     </div>
