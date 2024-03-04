@@ -8,7 +8,7 @@
     <style>
         /* Add custom CSS for layout */
         body, html {
-            height: 100%;
+            min-height: 100vh; /* Ensure full viewport height */
             margin: 0;
             padding: 0;
         }
@@ -17,7 +17,7 @@
             display: flex; /* Use flexbox */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
-            height: 100%; /* Ensure container stretches to full height */
+            min-height: 100vh; /* Ensure container doesn't collapse */
             padding: 0 100px; /* Add padding to the left and right edges of the container */
             flex-direction: column; /* Stack items vertically */
         }
