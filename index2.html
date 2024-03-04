@@ -8,8 +8,9 @@
         /* Common styles */
         body, html {
             margin: 0; /* Remove default margin */
-            padding: 0;
+            padding: 0; /* Remove default padding */
             font-family: Arial, sans-serif;
+            overflow-y: hidden; /* Hide vertical scrollbar */
         }
         nav {
             background: linear-gradient(120deg, #2980b9, #8e44ad);
@@ -46,8 +47,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin-top: 60px; /* Add top margin to prevent content from being hidden under the navigation bar */
+            min-height: 100vh;
+            padding-top: 60px; /* Add top padding to account for fixed navigation bar */
             background: linear-gradient(120deg, #2980b9, #8e44ad);
         }
         .content {
