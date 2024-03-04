@@ -40,9 +40,6 @@
         .about-content {
             margin-right: 20px; /* Add spacing between the divisions */
             text-align: center; /* Center align text */
-            background-color: rgba(255, 255, 255, 0.8); /* White semi-transparent background */
-            padding: 1px; /* Add padding to improve readability */
-            border-radius: 5px; /* Optional: Add border radius for rounded corners */
         }
 
         .about-image img {
@@ -76,11 +73,6 @@
         .about-content ul {
             text-align: left;
             padding-left: 1.5rem; /* Use rem units for consistent padding */
-        }
-
-        .about-content ul li {
-            list-style: inside; /* Keep the bullet points inside */
-            padding-bottom: 5px; /* Add padding to the bottom of each list item */
         }
 
         /* New container for h1 and paragraphs */
@@ -127,7 +119,69 @@
                     <li>Implementation of project review processes and issue resolution frameworks.</li>
                     <li>Rollout of project methodology and tools, along with ongoing guidance and training.</li>
                 </ul>
-                <p>Project Management Consulting</p>
+                <p>Project Management Consulting</p><style>
+                    /* Add custom CSS for layout */
+                    body, html {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+                
+                    .about-padding {
+                        display: flex; /* Use flexbox */
+                        justify-content: center; /* Center horizontally */
+                        align-items: left; /* Center vertically */
+                        height: 100%; /* Ensure container stretches to full height */
+                        padding: 0 100px; /* Add padding to the left and right edges of the container */
+                        flex-direction: column; /* Stack items vertically */
+                    }
+                
+                    .about-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%; /* Ensure the container takes up full width */
+                        max-width: 1200px; /* Set a max-width for the container */
+                        margin: 0 auto; /* Center the container horizontally */
+                    }
+                
+                    .about-content,
+                    .about-image {
+                        flex: 1;
+                        width: 40%; /* Each division takes up 40% of the viewport width */
+                    }
+                
+                    .about-content {
+                        margin-right: 20px; /* Add spacing between the divisions */
+                        text-align: center; /* Center align text */
+                        background-color: rgba(255, 255, 255, 0.8); /* White semi-transparent background */
+                        padding: 20px; /* Add padding to improve readability */
+                        border-radius: 5px; /* Optional: Add border radius for rounded corners */
+                    }
+                
+                    .about-image img {
+                        max-width: 100%;
+                        height: auto;
+                        width: 100%; /* Set the image width to 100% of its container */
+                    }
+                
+                    /* Add margin-bottom to the h1 element */
+                    h1 {
+                        margin-bottom: 2rem; /* Reduced margin */
+                        text-align: center; /* Center align the heading */
+                    }
+                
+                    h2 {
+                        margin-top: 2rem; /* Use rem units for consistent spacing */
+                    }
+                
+                    /* New container for h1 and paragraphs */
+                    .about-text-container {
+                        width: 80; /* Set width to 50% */
+                        margin: 0 auto; /* Center horizontally */
+                    }
+                </style>
+                
                 <ul>
                     <li>Expertise in Agile methodologies including DevOps, Kanban, and Scrum.</li>
                     <li>Training and implementation of best project management practices.</li>
