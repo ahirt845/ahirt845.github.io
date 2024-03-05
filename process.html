@@ -6,87 +6,153 @@
     <title>Blockchain Consulting LLC - Process</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #0b0b0b;
+        /* Add custom CSS for layout */
+        body, html {
+            min-height: 100vh; /* Ensure full viewport height */
             margin: 0;
             padding: 0;
         }
+
+        /* Add common styles for both pages */
+        h1 {
+            margin-top: 10px; /* Adjust the top margin as needed */
+            margin-bottom: 10px; /* Adjust the bottom margin as needed */
+            text-align: center; /* Center align the heading */
+        }
+
+        .process-padding {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure container doesn't collapse */
+            padding: 0 100px; /* Add padding to the left and right edges of the container */
+            flex-direction: column; /* Stack items vertically */
+            position: relative; /* Position relative for absolute positioning of h1 */
+        }
+
         .process-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 100px;
-            /* animation: slide-up 0.5s ease; */
-            /* height: 100vh; */
-        }
-        .process-header {
-            max-width: 800px;
-            padding: 20px;
-            background-color: #133e7700;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-            text-align: center;
-            color: rgb(35, 47, 80);
-            margin-bottom: 20px;
-        }
-        .process-content {
             display: grid;
             grid-template-columns: 1fr 1fr; /* Two equal columns */
             gap: 20px; /* Gap between cells */
-            max-width: 80%;
+            width: 100%; /* Increase width to 80% */
+            max-width: 1200px; /* Set a max-width for the container */
+            margin: 20px auto; /* Center the container horizontally */
+            background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
             padding: 20px;
-            background-color: #ffffffcd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .process-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-            color: #202020; /* Adjust text color */
-            grid-column: span 2; /* Span across both columns */
-            text-align: left;
-        }
-        .process-content h2 {
-            line-height: 1.6;
-            margin-bottom: 15px;
-            color: #202020; /* Adjust text color */
-            grid-column: span 2; /* Span across both columns */
-            text-align: center;
-        }
-        .process-content p.center {
-            text-align: center; /* Center align the paragraph */
-        }
-        .process-content ol {
-            padding-left: 20px;
-        }
-        .process-content ol li {
-            margin-bottom: 30px; /* Increased margin for better separation */
-        }
-        .process-content ul {
-            padding-left: 20px;
-        }
-        .process-content ul li {
-            margin-bottom: 30px; /* Increased margin for better separation */
-        }
-        .process-image {
-            max-width: 100%;
-            border-radius: 10px;
+            border-radius: 10px; /* Rounded corners */
+            /* animation: slide-up 0.5s ease; */
         }
 
-        /* Animation */
-        /* @keyframes slide-up {
-            from {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        } */
+        .process-content {
+            grid-column: 1 / span 2; /* Span both columns */
+            text-align: left; /* Center align content */
+        }
+
+        .process-services {
+            grid-column: 1 / span 1; /* Span first column */
+        }
+
+        .process-services-heading {
+            text-align: center; /* Center align the "Our Services" heading */
+        }
+
+        .process-image {
+            grid-column: 2 / span 1; /* Span second column */
+            text-align: center; /* Center align content */
+        }
+
+        .process-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .process-container-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px; /* Gap between cells */
+            width: 100%; /* Increase width to 80% */
+            max-width: 1200px; /* Set a max-width for the container */
+            margin: 20px auto; /* Center the container horizontally */
+            background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            animation: slide-up 0.5s ease;
+        }
+
+        .process-content-2 {
+            grid-column: 1 / span 1; /* Span first column */
+            text-align: center; /* Center align content */
+        }
+
+        .process-services-2 {
+            grid-column: 2 / span 1; /* Span second column */
+        }
+
+        .process-services-heading-2 {
+            text-align: center; /* Center align the "Our Services" heading */
+            grid-column: span 2;
+        }
+
+        .process-image-2 {
+            grid-column: 1 / span 1; /* Span first column */
+            text-align: center; /* Center align content */
+        }
+
+        .process-image-2 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Adjust margin-bottom for specific paragraphs */
+        .process-padding p {
+            margin-bottom: 10px; /* Adjust the margin-bottom here */
+        }
+
+        /* Left-align bullet points */
+        .process-content ul {
+            text-align: left;
+            padding-left: 20px; /* Adjust padding */
+        }
+
+        /* Left-align bullet points */
+        .process-content l {
+            text-align: left;
+            padding-left: 20px; /* Adjust padding */
+        }
+
+        /* New container for h1 and paragraphs */
+        .process-text-container {
+            width: 100%; /* Set width to 100% */
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        /* Left-align specific paragraphs inside .process-content */
+        .process-content p {
+            text-align: left;
+        }
+
+        /* Add left margin to align bullet points */
+        .process-services ol,
+        .process-services ul,
+        .process-services-2 ul {
+            padding-left: 10px; /* Adjust padding as needed */
+        }
+
+        /* Add margin to bottom of list items for vertical spacing */
+        .process-services ol li,
+        .process-services ul li {
+            margin-bottom: 15px; /* Adjust margin as needed */
+        }
+
+        .process-services-2 ul li {
+            margin-bottom: 15px; /* Adjust margin as needed */
+        }
+
+        nav {
+            margin-bottom: 20px; /* Add margin to create space below navigation */
+        }
     </style>
 </head>
 <body>
@@ -100,39 +166,44 @@
             <!-- Add more links as needed -->
         </ul>
     </nav>
-    
-    <div class="process-container">
-        <div class="process-header">
-            <h1>Our Process</h1>
-        </div>
-        <div class="process-content" style="margin-bottom: 30px;">
-            <p>If you are interested in our consulting services, you will be pleased to know our process is straightforward and flexible to meet your needs.</p>
-            <ol>
-                <li><b>Contact Us:</b> Fill out this <a href="contact.html">form</a> on our Contact page to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
-                <li><b>Schedule Consultation:</b> We'll schedule a free initial consultation with you, which can be conducted over the phone, virtual meeting (Zoom, etc), or in person if you're located in the Washington DC area.</li>
-                <li><b>Discuss Needs:</b> During the consultation we will discuss your business and projects, pain points, and in general what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
-                <li><b>Perform Work:</b> Our team will complete all work items ensuring we meet all scope, time, and cost requirements.</li>
-                <li><b>Review Work:</b> After the work is complete, we will review it with you to ensure you are completely satisfied. If not, we will discuss and perform further changes.</li>
-                <li><b>Work Completion:</b> Once the work is completed, we'll send an invoice to your accounting and finance team for payment.</li>
-            </ol>
-            <div>
-                <img src="/Images/SCRUMmeeting.png" alt="Process Image" class="process-image">
+
+    <div class="process-padding"> <!-- This div provides padding -->
+        <div class="process-text-container"> <!-- New container for h1 and paragraphs -->
+            <h1>Our Process</h1> <!-- Center align the About Us section -->
+            <div class="process-container">
+                <div class="process-content">
+                    <p>If you are interested in our consulting services, you will be pleased to know our process is straightforward and flexible to meet your needs.</p>                    
+                </div>
+                <div class="process-services">
+                    <!-- <h2 class="process-services-heading">Our Process</h2> -->
+                    <ol>
+                        <li><b>Contact Us:</b> Fill out this <a href="contact.html">form</a> on our Contact page to inquire about the services you're interested in and provide your general availability for an initial discussion.</li>
+                        <li><b>Schedule Consultation:</b> We'll schedule a free initial consultation with you, which can be conducted over the phone, virtual meeting (Zoom, etc), or in person if you're located in the Washington DC area.</li>
+                        <li><b>Discuss Needs:</b> During the consultation we will discuss your business and projects, pain points, and in general what you need help with. We'll review your requirements and provide an estimate of the time needed to address your needs.</li>
+                        <li><b>Perform Work:</b> Our team will complete all work items ensuring we meet all scope, time, and cost requirements.</li>
+                        <li><b>Review Work:</b> After the work is complete, we will review it with you to ensure you are completely satisfied. If not, we will discuss and perform further changes.</li>
+                        <li><b>Work Completion:</b> Once the work is completed, we'll send an invoice to your accounting and finance team for payment.</li>
+                    </ol>
+                </div>
+                <div class="process-image">
+                    <img src="Images/SCRUMmeeting.png" alt="Image Description">
+                </div>
             </div>
         </div>
 
-        <!-- New section -->
-        <div class="process-content">
-            <!-- <p class="center">Some Considerations</p> -->
-            <h2>Some Considerations</h2>
-            <div>
-                <img src="/Images/stickynotes.jpeg" alt="Image Description" class="process-image">
+        <div class="process-container-2">
+            <h2 class="process-services-heading-2">Some Considerations</h2>
+            <div class="process-image-2">
+                <img src="Images/stickynotes.jpeg" alt="Image Description">
             </div>
-            <ul>
-                <li><b>Access / Permissions:</b> The level of access you provide to us (e.g., admin access to your Atlassian account) will impact the time required to complete the tasks. Having an admin account where we can troubleshoot and perform the steps ourselves will be much faster than guiding a member of your team through the process.  </li>
-                <li><b>Level of Involvement:</b> We can spin up a new fully custom Jira project with little understanding of your project. In contrast, running a successful Daily Scrum meeting involves a much deeper understanding of the project and team.</li>
-                <li><b>Availability:</b> Our team is located in Northern Virginia, just outside of Washington, DC. Our core hours are Eastern Standard Time 9am - 6pm, but we can be available outside of those core hours with notice. </li>
-                <!-- Add more steps as needed -->
-            </ul>
+            <div class="process-services-2">
+                <ul>
+                    <li><b>Access / Permissions:</b> The level of access you provide to us (e.g., admin access to your Atlassian account) will impact the time required to complete the tasks. Having an admin account where we can troubleshoot and perform the steps ourselves will be much faster than guiding a member of your team through the process.  </li>
+                    <li><b>Level of Involvement:</b> We can spin up a new fully custom Jira project with little understanding of your project. In contrast, running a successful Daily Scrum meeting involves a much deeper understanding of the project and team.</li>
+                    <li><b>Availability:</b> Our team is located in Northern Virginia, just outside of Washington, DC. Our core hours are Eastern Standard Time 9am - 6pm, but we can be available outside of those core hours with notice. </li>
+                    <!-- Add more steps as needed -->
+                </ul>
+            </div>
         </div>
     </div>
 </body>
