@@ -32,6 +32,7 @@
             background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
             padding: 20px;
             border-radius: 10px; /* Rounded corners */
+            animation: slide-up 0.5s ease;
         }
 
         .about-content {
@@ -68,6 +69,7 @@
             background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
             padding: 20px;
             border-radius: 10px; /* Rounded corners */
+            animation: slide-up 0.5s ease;
         }
 
         .about-content-2 {
@@ -122,6 +124,18 @@
         .about-content p {
             text-align: left;
         }
+
+        /* Animation */
+        @keyframes slide-up {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -141,8 +155,10 @@
             <h1>About Us</h1> <!-- Center align the About Us section -->
             <div class="about-container">
                 <div class="about-content">
-                    <p>We have more than 10+ years leading software teams working in: financial technology, government contracting, and nonprofits.</p>
-                    <p>PMP and CSM certified, we can train your project teams to deliver high quality products efficiently and often utilizing industry leading Agile methodologies.</p>
+                    <p>At Blockchain Consulting LLC, we specialize in program and project management services tailored for Agile software development environments. With expertise in Agile methodologies like Scrum and Kanban, we ensure efficient project delivery while maintaining flexibility and adaptability to changing requirements.</p>
+                    <p>In addition, we offer specialized support for Atlassian products including Jira, Confluence, and Bitbucket, as well as various third-party marketplace providers. Our comprehensive support services encompass customization, integration, optimization, and troubleshooting to maximize the effectiveness of your Atlassian tools suite.</p>
+                    <p>With a focus on delivering high-quality solutions and enhancing collaboration within your organization, Blockchain Consulting LLC is your trusted partner for streamlined project management and Atlassian product support.</p>
+                    
                 </div>
                 <div class="about-services">
                     <h2 class="about-services-heading">Our Services</h2>

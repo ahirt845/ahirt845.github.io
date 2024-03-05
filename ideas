@@ -4,3 +4,26 @@
 4. Split Services into Atlassian, Program MGMT, and Project MGMT sections
     4a. In project mgmt section have a MS Project Gnatt chart
 5. No need to define website on front page. Use that for announcements, marketing, create a slide show
+
+
+
+
+<p>We have more than 10+ years leading software teams working in: financial technology, government contracting, and nonprofits.</p>
+<p>PMP and CSM certified, we can train your project teams to deliver high quality products efficiently and often utilizing industry leading Agile methodologies.</p>
+
+
+
+
+
+/* Animation */
+        @keyframes slide-up {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+animation: slide-up 0.5s ease;

@@ -21,6 +21,7 @@
             justify-content: center;
             align-items: center;
             height: 100%;
+            animation: slide-up 0.5s ease;
         }
 
         .contact-content,
@@ -86,6 +87,17 @@
             color: #202020;
             text-align: left;
         }
+
+        /* Animation */
+        @keyframes slide-up {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
     </style>
 </head>
 <body>
