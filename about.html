@@ -36,7 +36,7 @@
 
         .about-content {
             grid-column: 1 / span 2; /* Span both columns */
-            text-align: center; /* Center align content */
+            text-align: left; /* Center align content */
         }
 
         .about-services {
@@ -53,6 +53,42 @@
         }
 
         .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .about-container-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px; /* Gap between cells */
+            width: 100%; /* Increase width to 80% */
+            max-width: 1200px; /* Set a max-width for the container */
+            margin: 20px auto; /* Center the container horizontally */
+            background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .about-content-2 {
+            grid-column: 1 / span 1; /* Span first column */
+            text-align: center; /* Center align content */
+        }
+
+        .about-services-2 {
+            grid-column: 2 / span 1; /* Span second column */
+        }
+
+        .about-services-heading-2 {
+            text-align: center; /* Center align the "Our Services" heading */
+        }
+
+        .about-image-2 {
+            grid-column: 1 / span 1; /* Span first column */
+            text-align: center; /* Center align content */
+        }
+
+        .about-image-2 img {
             max-width: 100%;
             height: auto;
             border-radius: 10px; /* Rounded corners */
@@ -140,6 +176,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="about-container-2">
+            <div class="about-image-2">
+                <img src="Images/credentials_clear.png" alt="Image Description">
+            </div>
+            <div class="about-services-2">
+                <h2 class="about-services-heading-2">Our Credentials</h2>
+                <p>NEW - Atlassian Product Suite Consulting</p>
+                <ul>
+                    <li>Create custom Jira projects utilizing Agile principles that match your SDLC.</li>
+                    <li>Utilize Automation tools to reduce time consuming tasks.</li>
+                    <li>Enhance team reporting using Dashboards and 3rd party BI tools like eazyBI.</li>
+                    <li>Solve any problem with wealth of knowledge of Atlassian products.</li>
+                    <li>Support and advice about 3rd party add on tools to enhance Jira, Confluence, or Bitbucket environments.</li>
+                </ul>
+                <p>Program Management Consulting</p>
+                <ul>
+                    <li>Strategic alignment of project goals with enterprise-level strategy.</li>
+                    <li>Establishment of project prioritzation criteria and methodology.</li>
+                    <li>Oversight of project portfolio, resource allocation, and budget management.</li>
+                    <li>Implementation of project review processes and issue resolution frameworks.</li>
+                    <li>Rollout of project methodology and tools, along with ongoing guidance and training.</li>
+                </ul>
+                <p>Project Management Consulting</p>
+                <ul>
+                    <li>Expertise in Agile methodologies including DevOps, Kanban, and Scrum.</li>
+                    <li>Training and implementation of best project management practices.</li>
+                    <li>AWS environment improvement and SOC report creation.</li>
+                    <li>CUstom Change Approval Board (CAB) processes development.</li>
+                    <li>Management of AWS accounts and relationship with cloud operations teams.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 </html>
