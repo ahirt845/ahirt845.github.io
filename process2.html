@@ -13,14 +13,21 @@
             padding: 0;
         }
 
+        /* Add common styles for both pages */
+        h1 {
+            margin-top: 10px; /* Adjust the top margin as needed */
+            margin-bottom: 10px; /* Adjust the bottom margin as needed */
+            text-align: center; /* Center align the heading */
+        }
+
         .process-padding {
             display: flex; /* Use flexbox */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
             min-height: 100vh; /* Ensure container doesn't collapse */
-            margin-top: -2%;
             padding: 0 100px; /* Add padding to the left and right edges of the container */
             flex-direction: column; /* Stack items vertically */
+            position: relative; /* Position relative for absolute positioning of h1 */
         }
 
         .process-container {
@@ -98,21 +105,6 @@
             border-radius: 10px; /* Rounded corners */
         }
 
-        /* Add margin-top and margin-bottom to the h1 element */
-        h1 {
-            margin-top: 10px; /* Adjust the top margin as needed */
-            margin-bottom: 10%; /* Adjust the bottom margin as needed */
-            text-align: center; /* Center align the heading */
-        }
-
-        .process-content h2 {
-            line-height: 1.6;
-            margin-bottom: 15px;
-            color: #202020; /* Adjust text color */
-            grid-column: span 2; /* Span across both columns */
-            text-align: center;
-        }
-
         /* Adjust margin-bottom for specific paragraphs */
         .process-padding p {
             margin-bottom: 10px; /* Adjust the margin-bottom here */
@@ -158,13 +150,6 @@
             margin-bottom: 15px; /* Adjust margin as needed */
         }
 
-        /* Adjust h1 position */
-        h1 {
-            position: absolute;
-            top: 6%; /* Position at 50% from top */
-            transform: translateY(-50%); /* Translate up by 50% of its own height */
-        }
-
         nav {
             margin-bottom: 20px; /* Add margin to create space below navigation */
         }
@@ -184,6 +169,7 @@
 
     <div class="process-padding"> <!-- This div provides padding -->
         <div class="process-text-container"> <!-- New container for h1 and paragraphs -->
+            <h1>Our Process</h1> <!-- Center align the About Us section -->
             <div class="process-container">
                 <div class="process-content">
                     <p>If you are interested in our consulting services, you will be pleased to know our process is straightforward and flexible to meet your needs.</p>                    
@@ -205,8 +191,6 @@
             </div>
         </div>
 
-        <h1>Our Process</h1> <!-- Center align the About Us section -->
-
         <div class="process-container-2">
             <h2 class="process-services-heading-2">Some Considerations</h2>
             <div class="process-image-2">
@@ -221,7 +205,6 @@
                 </ul>
             </div>
         </div>
-    </div>
     </div>
 </body>
 </html>
