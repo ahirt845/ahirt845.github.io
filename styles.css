@@ -208,3 +208,54 @@ nav ul li a:hover {
 .interactive-element:hover {
     background-color: #555;
 }
+
+/* Service cards */
+.services-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.service-card {
+    width: calc(25% - 20px); /* Adjust the width of each card to fit four cards in a row with a 20px gap */
+    margin-bottom: 20px;
+    background-color: #ffffffa3;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    .service-card {
+        width: 90%; /* Set width to 90% for single column layout on mobile */
+    }
+}
+
+.service-card i {
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+.service-card div {
+    padding: 20px;
+}
+
+.service-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Other Styles */
+.contact-input, textarea {
+    font-family: Arial, sans-serif;
+}
+
+.left-align {
+    text-align: left;
+}
+
+/* Custom animation for service cards */
+.service-card:hover {
+    transform: translateY(-5px);
+}
