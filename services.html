@@ -7,13 +7,61 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome icons -->
     <style>
-        /* Add custom CSS for animation */
+        /* Container styles */
+        .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 100vh;
+                }
+
+        .content {
+                    text-align: center;
+                    max-width: 90%;
+                    padding: 20px;
+        }
+        /* Service cards */
+        .services-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+
         .service-card {
+            width: calc(25% - 20px); /* Adjust the width of each card to fit four cards in a row with a 20px gap */
+            margin-bottom: 20px;
+            background-color: #ffffffa3;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer; /* Change cursor to pointer on hover */
             transition: transform 0.3s ease; /* Add smooth transition */
         }
+
         .service-card:hover {
             transform: translateY(-5px); /* Move the card up by 5px on hover */
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 600px) {
+            .service-card {
+                width: 90%; /* Set width to 90% for single column layout on mobile */
+            }
+        }
+
+        .service-card i {
+            margin: 20px auto;
+            font-size: 24px;
+        }
+
+        .service-card div {
+            padding: 20px;
+        }
+
+        .service-title {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
