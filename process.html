@@ -152,19 +152,63 @@
 
         nav {
             margin-bottom: 20px; /* Add margin to create space below navigation */
+            background: linear-gradient(to bottom, #16171aec, #0b226982);
+            padding: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        nav h1 {
+            color: #fff;
+            margin-left: 60px;
+            font-size: 1.7em;
+            font-family: 'Kefa', Bold, serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 30px; /* Adjusted padding for the text */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li:last-child a {
+            margin-right: 40px; /* Adjusted margin for the last link */
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
         }
     </style>
 </head>
-<nav>
-    <h1>Blockchain Consulting LLC</h1>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<body>
+    <nav>
+        <h1>Blockchain Consulting LLC</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="process-padding"> <!-- This div provides padding -->
         <div class="process-text-container"> <!-- New container for h1 and paragraphs -->
