@@ -28,20 +28,10 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             text-align: left;
-            width: 100%;
             position: fixed;
             bottom: 0;
             left: 0;
-            z-index: 999; /* Ensure Latest News appears above other content */
-        }
-
-        .latest-news-container.relative {
-            position: relative;
-            bottom: auto;
-            left: auto;
-            width: auto;
-            margin-top: 30px; /* Adjust as needed */
-            margin-bottom: 30px; /* Adjust as needed */
+            width: 100%;
         }
 
         .latest-news-container h2 {
@@ -142,46 +132,32 @@
                 <h2>Main News Title</h2>
                 <p>Description of the main news snippet...</p>
             </div>
+            
+            <div class="latest-news-container">
+                <div class="latest-news">
+                    <div class="news-item">
+                        <h3>Latest News</h3>
+                    </div>
+                    <div class="news-item">
+                        <h3>News 1</h3>
+                        <p>Description of News 1...</p>
+                    </div>
+                    <div class="news-item">
+                        <h3>News 2</h3>
+                        <p>Description of News 2...</p>
+                    </div>
+                    <div class="news-item">
+                        <h3>News 3</h3>
+                        <p>Description of News 3...</p>
+                    </div>
+                    <div class="news-item">
+                        <h3>News 4</h3>
+                        <p>Description of News 4...</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="latest-news-container" id="latest-news-container">
-        <div class="latest-news">
-            <div class="news-item">
-                <h3>Latest News</h3>
-            </div>
-            <div class="news-item">
-                <h3>News 1</h3>
-                <p>Description of News 1...</p>
-            </div>
-            <div class="news-item">
-                <h3>News 2</h3>
-                <p>Description of News 2...</p>
-            </div>
-            <div class="news-item">
-                <h3>News 3</h3>
-                <p>Description of News 3...</p>
-            </div>
-            <div class="news-item">
-                <h3>News 4</h3>
-                <p>Description of News 4...</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript to toggle relative positioning when scrolling
-        window.addEventListener('scroll', function() {
-            var latestNewsContainer = document.getElementById('latest-news-container');
-            var scrollPosition = window.scrollY;
-
-            if (scrollPosition > 0) {
-                latestNewsContainer.classList.add('relative');
-            } else {
-                latestNewsContainer.classList.remove('relative');
-            }
-        });
-    </script>
 
 </body>
 </html>
